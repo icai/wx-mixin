@@ -54,18 +54,17 @@ function composeCatch(...funcs) {
 
 
 // 页面堆栈
-// const pagesStack = getApp().$pagesStack;
+const pagesStack = getApp().$pagesStack;
 
 const PAGE_EVENT = ['onLoad', 'onReady', 'onShow', 'onHide', 'onUnload', 'onPullDownRefresh', 'onReachBottom', 'onShareAppMessage'];
 const APP_EVENT = ['onLaunch', 'onShow', 'onHide', 'onError'];
 
 const onLoad = function (opts) {
   // 把pageModel放入页面堆栈
-  //  pagesStack.addPage(this);
-
-  //   this.$invoke = (pagePath, methodName, ...args) => {
-  //     pagesStack.invoke(pagePath, methodName, ...args);
-  //   };
+   pagesStack.addPage(this);
+    this.$invoke = (pagePath, methodName, ...args) => {
+      pagesStack.invoke(pagePath, methodName, ...args);
+    };
 
   this.onBeforeLoad(opts);
   this.onNativeLoad(opts);

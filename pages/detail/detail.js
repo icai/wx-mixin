@@ -9,7 +9,7 @@ import duplicate from '../../mixins/duplicate';
 import lifecycle from '../../mixins/lifecycle';
 import lifecycle2 from '../../mixins/lifecycle2';
 
-Page(createPage({
+createPage({
   mixins: [sayHello, counter, duplicate, lifecycle, lifecycle2],
 
   sayHello() {
@@ -33,4 +33,4 @@ Page(createPage({
   onShow() {
     console.log(`page-detail onShow...`);
   }
-}));
+});

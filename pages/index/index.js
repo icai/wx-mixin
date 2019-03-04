@@ -9,7 +9,7 @@ import duplicate from '../../mixins/duplicate';
 import lifecycle from '../../mixins/lifecycle';
 import lifecycle2 from '../../mixins/lifecycle2';
 
-Page(createPage({
+createPage({
   data: {
     person: 'foo',
   },
@@ -63,4 +63,4 @@ Page(createPage({
       url: '/pages/detail/detail'
     })
   }
-}));
+});
