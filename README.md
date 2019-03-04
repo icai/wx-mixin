@@ -12,7 +12,7 @@ import duplicate from '../../mixins/duplicate';
 import lifecycle from '../../mixins/lifecycle';
 import lifecycle2 from '../../mixins/lifecycle2';
 
-Page(createPage({
+createPage({
   data: {
     person: 'foo',
   },
@@ -36,7 +36,7 @@ Page(createPage({
   onShow() {
     console.log('page onShow...')
   }
-}));
+});
 ```
 
 
@@ -45,7 +45,7 @@ Page(createPage({
 ```
 import createPage from '../../utils/createPage';
 
-Page(createPage({
+createPage({
   onBeforeLoad(opts) {
     this.setData({
       'foo': 'foo-onBeforeLoad'
